@@ -1,0 +1,371 @@
+/* -------------------------------------------------------------------------
+# IAV Global Styles
+------------------------------------------------------------------------- */
+
+/* stylelint-disable */
+
+/* Import IAV Webfont */
+@import url(https://use.typekit.net/oie8eir.css);
+
+/* Available IAV Global Styles */
+html {
+  text-rendering: optimizeLegibility !important;
+  text-rendering: geometricPrecision !important;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased !important;
+  text-shadow: rgba(0, 0, 0, 0.01) 0 0 1px;
+
+  --iav-blue: #14639e;
+  --iav-light-blue: #5daedb;
+  --iav-dark-blue: #0c3868;
+  --iav-light-blue-menu: #009fca;
+
+  /* Disable horizontal scroll bounce */
+  // height: 100%;
+  // overflow: hidden;
+}
+
+h1,
+h3 {
+  color: $iav-blue;
+}
+
+.iav-blue {
+  color: $iav-blue;
+}
+
+.iav-text-medium {
+  font-size: 2rem;
+}
+
+.fullpage-img {
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-repeat: none;
+  background-position: center center;
+}
+
+/* Fix for CSS transitions on structural elements on page load: Added a class of "preload" to the body – Then removed that class on page load with JQuery common.js */
+.preload * {
+  -webkit-transition: none !important;
+  -moz-transition: none !important;
+  -ms-transition: none !important;
+  -o-transition: none !important;
+}
+
+/* Disable text selection highlighting */
+.noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently supported by Chrome and Opera */
+}
+
+/* Fix for anchor position with fixed header */
+:target::before {
+  content: "";
+  display: block;
+  height: 180px;
+  margin: -180px 0 0;
+}
+
+/* Text meant only for screen readers. */
+.screen-reader-text {
+  position: absolute !important;
+  left: -999em;
+}
+
+.iav-stage-container,
+.iav-container {
+  margin-left: 15px;
+  margin-right: 15px;
+
+  @media (min-width: $breakpoint-large) {
+    max-width: 1100px;
+    padding-left: 52px;
+    padding-right: 52px;
+    background-color: #fff;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.template-content-stories-data .iav-container,
+.template-content-subpages-data .iav-container,
+.template-landing-onepager-data .iav-container {
+  padding-bottom: 0;
+}
+
+/* Set the first element that follows the stage to margin 0. */
+.iav-modules {
+  background-color: #fff;
+}
+
+.iav-modules > * {
+  background-color: #fff;
+}
+
+.iav-modules > :first-child {
+  margin-top: 0;
+}
+
+/* If the first element has any first children with margins make it 0. */
+.iav-modules > :first-child > :first-child,
+.iav-modules > :first-child > :first-child * {
+  margin-top: 0;
+}
+
+p,
+a, 
+h1, 
+h2, 
+h3, 
+h4, 
+h5,  
+h6 {
+  word-break: break-word;
+  word-wrap: break-word;
+}
+
+h1, 
+h2, 
+h3 {
+  @media (min-width: $breakpoint-medium) {
+    word-break: normal;
+    word-wrap: normal;
+  }
+}
+
+/* --------------------------------------------------------------
+# IAV Button
+-------------------------------------------------------------- */
+
+ button a {
+  color: white;
+  font-size: 22px;
+  line-height: 30.6px;
+  display: block;
+}
+
+/*
+button:focus,
+input:focus {
+  outline: none;
+  background-color: transparent !important;
+}
+ */
+
+ // Remove Blue Color From Links in Button
+ button a:hover {
+   color: white;
+ }
+
+/* --------------------------------------------------------------
+# IAV Global Subscription
+-------------------------------------------------------------- */
+.iav-global-subscription {
+  margin: auto;
+  padding-top: 60px;
+  padding-bottom: 50px;
+  background-color: #009fca;
+  color: white;
+  text-align: center;
+
+  h2 {
+    color: white;
+    font-size: 32px;
+    line-height: 40px;
+
+    @media (min-width: $breakpoint-medium) {
+      font-size: 48px;
+      line-height: 55.2px;
+    }
+  }
+
+  h4 {
+    color: white;
+    margin-top: 30px;
+  }
+
+  a {
+    color: white;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 25.6px;
+  }
+}
+
+.subs-link {
+  position: relative;
+}
+
+.subs-link::after {
+  position: absolute;
+  top: 4px;
+  right: -42px;
+  content: '';
+  background-image: url($search_button-green_link-arrow);
+  height: 16px;
+  width: 16px;
+  padding-left: 12px;
+  display: block;
+  background-repeat: no-repeat;
+  margin-left: 10px;
+}
+
+/* --------------------------------------------------------------
+# Headline Siblings
+-------------------------------------------------------------- */
+.iav-headline + .iav-container {
+  margin-top: 0;
+}
+
+.iav-headline + .iav-headline {
+  margin-top: 50px;
+}
+
+.iav-headline + .iav-headline-object {
+  margin-top: 50px;
+}
+
+/* --------------------------------------------------------------
+# Reset the Margins of all Content Story Modules and apply them to the outer container
+-------------------------------------------------------------- */
+.iav-container .iav-text,
+.iav-container .iav-headline,
+.iav-container .iav-headline-object,
+.iav-container .iav-quote,
+.iav-container .iav-image,
+.iav-container .iav-image-text,
+.iav-container .iav-video,
+.iav-container .iav-tagline {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.iav-container .iav-text h3:first-child {
+  margin-top: 0;
+}
+
+.iav-container .iav-accordion,
+.iav-container .iav-table,
+.iav-container .iav-mosaic,
+.iav-container .iav-numbers {
+  margin-top: 0;
+  margin-bottom: 0;
+
+  @media (min-width: $breakpoint-small) {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+}
+
+/* --------------------------------------------------------------
+# IAV Arrow Link
+-------------------------------------------------------------- */
+.iav-arrow-link {
+  position: relative;
+  font-size: 16px;
+  color: $iav-blue;
+  font-weight: bold;
+  display: block;
+  //margin-top: 30px;
+
+  @media (min-width: $breakpoint-medium) {
+    //margin-top: 50px;
+  }
+/* --------------------------------------------------------------
+# Maybe there is different settings at different parts of the page necessary:
+padding top of 3 is now adjusted for the arrow links in the single jobs page
+if you need a different setting - please create new class
+-------------------------------------------------------------- */
+
+  &::after {
+    content: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='UTF-8'%3F%3E%3Csvg width='15px' height='14px' viewBox='0 0 15 14' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3C!-- Generator: Sketch 54.1 (76490) - https://sketchapp.com --%3E%3Ctitle%3EBlue Arrow%3C/title%3E%3Cdesc%3ECreated with Sketch.%3C/desc%3E%3Cg id='IAV' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd'%3E%3Cg id='S_Stellenanzeige_Header-small_DESK' transform='translate(-390.000000, -2754.000000)' fill='%2314639E' fill-rule='nonzero'%3E%3Cpolygon points='404.78125 2760.96875 397.875 2767.875 397.1875 2767.21875 402.96875 2761.40625 390.9375 2761.4375 390.9375 2760.46875 402.96875 2760.5 397.1875 2754.6875 397.875 2754.0625 404.78125 2760.9375'%3E%3C/polygon%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    padding-left: 11px;
+    display: inline-block;
+    width: 15px;
+    //height: 14px;
+    vertical-align: middle;
+  }
+
+  &:hover {
+    // hover effects
+    color: #009fca;
+    text-decoration: none;
+  }
+  // sidebar-link icon hover
+  &:hover::after {
+    // icon hover
+    content: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='UTF-8'%3F%3E%3Csvg width='15px' height='14px' viewBox='0 0 15 14' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3C!-- Generator: Sketch 54.1 (76490) - https://sketchapp.com --%3E%3Ctitle%3ELight Blue Arrow%3C/title%3E%3Cdesc%3ECreated with Sketch.%3C/desc%3E%3Cg id='IAV' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd'%3E%3Cg id='S_Stellenanzeige_Header-small_DESK' transform='translate(-390.000000, -2797.000000)' fill='%23009FCA' fill-rule='nonzero'%3E%3Cpolygon points='404.78125 2803.96875 397.875 2810.875 397.1875 2810.21875 402.96875 2804.40625 390.9375 2804.4375 390.9375 2803.46875 402.96875 2803.5 397.1875 2797.6875 397.875 2797.0625 404.78125 2803.9375'%3E%3C/polygon%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  }
+}
+
+.iav-arrow-link-6 {
+  position: relative;
+  font-size: 16px;
+  color: $iav-blue;
+  font-weight: bold;
+  display: block;
+
+/* --------------------------------------------------------------
+# Maybe there is different settings at different parts of the page necessary:
+padding top of 3 is now adjusted for the arrow links in the single jobs page
+if you need a different setting - please create new class
+-------------------------------------------------------------- */
+
+  &::after {
+    content: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='UTF-8'%3F%3E%3Csvg width='15px' height='14px' viewBox='0 0 15 14' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3C!-- Generator: Sketch 54.1 (76490) - https://sketchapp.com --%3E%3Ctitle%3EBlue Arrow%3C/title%3E%3Cdesc%3ECreated with Sketch.%3C/desc%3E%3Cg id='IAV' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd'%3E%3Cg id='S_Stellenanzeige_Header-small_DESK' transform='translate(-390.000000, -2754.000000)' fill='%2314639E' fill-rule='nonzero'%3E%3Cpolygon points='404.78125 2760.96875 397.875 2767.875 397.1875 2767.21875 402.96875 2761.40625 390.9375 2761.4375 390.9375 2760.46875 402.96875 2760.5 397.1875 2754.6875 397.875 2754.0625 404.78125 2760.9375'%3E%3C/polygon%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    //position: absolute;
+    //padding-top: 6px;
+    padding-left: 11px;
+    display: inline-block;
+    width: 15px;
+    //height: 14px;
+    vertical-align: middle;
+  }
+
+  &:hover {
+    // hover effects
+    color: #009fca;
+    text-decoration: none;
+  }
+  // sidebar-link icon hover
+  &:hover::after {
+    // icon hover
+    content: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='UTF-8'%3F%3E%3Csvg width='15px' height='14px' viewBox='0 0 15 14' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3C!-- Generator: Sketch 54.1 (76490) - https://sketchapp.com --%3E%3Ctitle%3ELight Blue Arrow%3C/title%3E%3Cdesc%3ECreated with Sketch.%3C/desc%3E%3Cg id='IAV' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd'%3E%3Cg id='S_Stellenanzeige_Header-small_DESK' transform='translate(-390.000000, -2797.000000)' fill='%23009FCA' fill-rule='nonzero'%3E%3Cpolygon points='404.78125 2803.96875 397.875 2810.875 397.1875 2810.21875 402.96875 2804.40625 390.9375 2804.4375 390.9375 2803.46875 402.96875 2803.5 397.1875 2797.6875 397.875 2797.0625 404.78125 2803.9375'%3E%3C/polygon%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  }
+}
+
+.iav-link {
+  margin-top: 30px;
+  margin-bottom: 30px;
+
+  @media (min-width: $breakpoint-medium) {
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+}
+
+.iav-related-news-link {
+  margin-top: 30px;
+  margin-bottom: 0;
+
+  @media (min-width: $breakpoint-medium) {
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+}
+
+.uk-navbar-dropdown .uk-container{
+  .uk-grid{
+    overflow: hidden;
+    .sub-menu{
+      transition: margin 0.2s;
+    }
+  }
+} 

@@ -1,0 +1,663 @@
+/* stylelint-disable */
+
+/* --------------------------------------------------------------
+# HEADER
+-------------------------------------------------------------- */
+
+header {
+  display: inline-block;
+  border-bottom: 1px solid #f0f0f0;
+  width: 100%;
+  background-color: #fff;
+  position: fixed;
+  top: 0;
+  z-index: 99;
+
+  @media (min-width: $breakpoint-medium) {
+    border-bottom: 0;
+  }
+}
+
+/* --------------------------------------------------------------
+# HEADER BANNER
+-------------------------------------------------------------- */
+
+.banner {
+  background-color: $iav-dark-blue;
+  background-repeat: no-repeat;
+  display: flex;
+  width: 100%;
+
+  .small-band {
+    width: 12.5%;
+    height: 10px;
+
+    @media (min-width: $breakpoint-medium) {
+      height: 33px;
+    }
+  }
+
+  .band-1 {
+    background-color: #5daedb;
+  }
+
+  .band-2 {
+    background-color: $iav-link-hover-blue;
+  }
+
+  .band-3 {
+    background-color: $iav-blue;
+  }
+
+  .band-4 {
+    background-color: #0e4a80;
+  }
+
+  .band-5 {
+    float: left;
+    width: 50%;
+    background-color: $iav-dark-blue;
+  }
+}
+
+header .iav-header-language-list a {
+    font-size: 16px;
+    line-height: 25.6px;
+    color: white;
+    position: absolute;
+    top: 5px;
+    right: 30px;
+}
+
+/* --------------------------------------------------------------
+# LOGO
+-------------------------------------------------------------- */
+
+header .iav-logo {
+  margin-bottom: 0 !important;
+  margin-top: 0;
+  margin-right: 0;
+  margin-left: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 70px;
+  > div {
+    width: 200px;
+    height: 56px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    &.iav-logo-desktop{
+      background-image: url('../images/iav_logo.svg');
+    }
+    &.iav-logo-mobile{
+      background-image: url('../images/iav_logo_mob.svg');
+    }
+  }
+ /*  img {
+    width: 100%;
+    height: 100%; 
+  } */
+  @media (min-width: $breakpoint-medium) {
+    min-height: 86px;
+    margin-left: auto; /* makes the flexbox move the logo to the right */
+  }
+}
+
+.iav-logo-desk-mobile {
+  margin-top: 5px;
+}
+
+/* --------------------------------------------------------------
+# MOBILE MENU
+-------------------------------------------------------------- */
+
+header .mobile-menu {
+  background-color: $iav-white;
+  //z-index: 10;
+
+  li {
+    border-bottom: 1px solid $iav-light-blue-menu;
+    list-style-type: none;
+
+    & a:hover {
+      color: $iav-light-blue-menu;
+    }
+
+    & .active > a {
+      color: $iav-light-blue-menu;
+      font-weight: 700;
+    }
+  }
+
+  li.menu-item-has-children {
+    background-color: white;
+    background-image: url($nav-arrow-right);
+    background-repeat: no-repeat;
+    background-position: right 16px center;
+
+    &:hover {
+      background-image: url('../images/arrow_right_hover.png');
+      color: $iav-light-blue-menu;
+    }
+
+    &:active {
+      background-image: url('../images/arrow_right_hover.png');
+      color: $iav-light-blue-menu;
+    }
+  }
+
+  /* Arrow Back - Class injected from Slider Menu */
+  a.slide-menu-control {
+    background-image: url($nav-arrow-left);
+    background-repeat: no-repeat;
+    background-position: left 24px center;
+    padding-left: 50px;
+    font-weight: 700;
+  }
+}
+
+// Menu Styles Active Links
+header .mobile-menu li.active.menu-item-has-children > a {
+  color: $iav-light-blue-menu;
+  font-weight: 700;
+}
+
+header .uk-navbar-toggle {
+  min-height: 70px;
+
+  @media (min-width: $breakpoint-medium) {
+    min-height: 86px;
+  }
+}
+
+header .iav-navbar-toggle-mobile {
+  min-height: 70px;
+}
+
+header .iav-mobile-language-button {
+  border: 0;
+  padding: 0;
+  font-size: 16px;
+  line-height: 25.5px;
+  color: $iav-blue;
+  background-color: none;
+  margin-right: 30px;
+  position: relative;
+  width: 35px;
+  height: 70px;
+
+  div {
+    position: absolute;
+    top: 24px;
+    margin-left: 0;
+  }
+
+  a.active {
+    color: $iav-blue;
+  }
+
+  a:hover {
+    color: $iav-blue;
+  }
+}
+
+/* --------------------------------------------------------------
+# The first Submenu is BLUE
+-------------------------------------------------------------- */
+
+.sub-menu.bg-blue {
+  background-color: $iav-blue;
+  transition: background-color 1000ms ease-in-out;
+}
+
+.sub-menu.bg-blue li {
+  color: $iav-white;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.sub-menu.bg-blue * {
+  color: $iav-white;
+}
+
+.sub-menu.bg-blue li:first-child {
+  border-bottom-color: white;
+  margin-left: -15px;
+  margin-right: -15px;
+  padding-left: 30px;
+  padding-right: 30px;
+  margin-bottom: 10px;
+
+  & .slide-menu-control {
+    padding-left: 30px;
+  }
+}
+
+.sub-menu.bg-blue li.menu-item a {
+  border: 1px solid white;
+}
+
+.mobile-menu li.menu-item-has-children:first-of-type ul.sub-menu li.menu-item {
+  display: inline-block;
+  border: 0;
+  margin: 20px 0 0 15px;
+}
+
+.mobile-menu li.menu-item-has-children:first-of-type ul.sub-menu li.menu-item a {
+  border-radius: 45px;
+  padding: 5px 32px;
+}
+
+.sub-menu.bg-blue .slide-menu-control {
+  background: url($mobile-menu-arrow-left-white);
+  background-repeat: no-repeat;
+  background-position: 0 center;
+}
+
+/* --------------------------------------------------------------
+# MOBILE Close Icon
+-------------------------------------------------------------- */
+
+#iav-mobile-close {
+  width: 22px;
+  height: 22px;
+  position: relative;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: 0.5s ease-in-out;
+  -moz-transition: 0.5s ease-in-out;
+  -o-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+  cursor: pointer;
+  float: left;
+  margin-right: 30px;
+  display: block;
+
+  span {
+    display: block;
+    position: absolute;
+    height: 2px;
+    width: 100%;
+    background: $iav-blue;
+    border-radius: 9px;
+    opacity: 1;
+    left: 0;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-transition: 0.25s ease-in-out;
+    -moz-transition: 0.25s ease-in-out;
+    -o-transition: 0.25s ease-in-out;
+    transition: 0.25s ease-in-out;
+
+    &:nth-child(1) {
+      top: 1px;
+    }
+
+    &:nth-child(2) {
+      top: 11px;
+    }
+
+    &:nth-child(3) {
+      top: 21px;
+    }
+  }
+
+  &.open span {
+    &:nth-child(1) {
+      top: 11px;
+      -webkit-transform: rotate(135deg);
+      -moz-transform: rotate(135deg);
+      -o-transform: rotate(135deg);
+      transform: rotate(135deg);
+    }
+
+    &:nth-child(3) {
+      top: 11px;
+      -webkit-transform: rotate(-135deg);
+      -moz-transform: rotate(-135deg);
+      -o-transform: rotate(-135deg);
+      transform: rotate(-135deg);
+    }
+
+    &:nth-child(2) {
+      opacity: 0;
+      left: -60px;
+    }
+  }
+
+  @media (min-width: $breakpoint-medium) {
+    display: none;
+  }
+}
+
+.iav-navbar-mobile button {
+  background-color: red;
+}
+
+/* --------------------------------------------------------------
+# PRIMARY MENU
+-------------------------------------------------------------- */
+/* --------------------------------------------------------------
+# First Level
+-------------------------------------------------------------- */
+.iav-navbar-container {
+  padding-top: 0;
+  .uk-tab, .uk-navbar-left, 
+  .uk-navbar-right, 
+  :only-child.uk-navbar-center{
+    flex-wrap: nowrap;
+  }
+ 
+  @media (min-width: $breakpoint-medium) {
+    //padding-top: 30px;
+  }
+}
+
+.iav-nav-flex {
+  @media (min-width: $breakpoint-medium) {
+    display: flex;
+    justify-content: space-around;
+  }
+}
+
+#iav-navbar {
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 7px;
+  opacity: 0;
+}
+
+// This pushes the Magnifyer to the Left and Logo to right
+#iav-navbar div:last-child {
+  margin-left: auto;
+}
+
+// Rewrite the distance of uk-tab items
+.uk-tab {
+  margin-left: -30px;
+}
+
+.uk-tab > * {
+  padding-left: 30px;
+}
+
+.iav-navbar-nav > li  {
+  color: $iav-blue;
+
+  &:hover {
+    color: $iav-blue;
+  }
+}
+
+// Reset the UK Styles for main menu - otherwise link color sometimes dark
+.uk-navbar-nav > li:hover > a,
+.uk-navbar-nav > li > a:focus,
+.uk-navbar-nav > li > a.uk-open {
+  color: $iav-blue;
+  outline: none;
+}
+
+.iav-navbar-nav > li > a {
+  color: $iav-blue;
+  text-decoration: none;
+  cursor: pointer;
+  text-transform: none;
+  font-family: "aktiv-grotesk", "Helvetica Neue", Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 200;
+  line-height: 1.6;
+  min-height: 70px;
+  font-size: 16px;
+  padding: 0; // remove padding from uikit tabs items
+
+  &:hover {
+    color: $iav-blue;
+  }
+
+  &:focus {
+    color: $iav-blue;
+  }
+
+  @media (min-width: $breakpoint-medium) {
+    min-height: 86px; /* 80 padding + 16 for font */
+    margin-top: 30px;
+  }
+}
+
+.iav-navbar-nav::before {
+  border: 0; /* resets the grey bottom border of uikit tab */
+}
+
+.iav-navbar-nav>*>a {
+  border-bottom: 4px solid transparent; /* makes uikit tab borders 4px */
+
+  &:hover {
+    border-bottom-color: $iav-blue;
+  }
+}
+
+// Active State in Main Menu Level 1
+header .iav-primary-menu > ul > li.active > a {
+  border-color: $iav-blue;
+  font-weight: 700;
+  color: $iav-blue;
+}
+
+/* --------------------------------------------------------------
+# DropDown
+-------------------------------------------------------------- */
+
+.uk-navbar-dropdown {
+  margin-top: 0;
+  box-shadow: none;
+  //padding-top: 50px;
+  padding-bottom: 50px;
+  border-top: 1px solid #f0f0f0;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+// Close Button
+.iav-menu-drop-close {
+    width: 42px;
+    height: 42px;
+    z-index: 1;
+    padding-top: 8px;
+    padding-bottom: 20px;
+}
+
+/* --------------------------------------------------------------
+# DropDown Items
+-------------------------------------------------------------- */
+
+.menu-item-title {
+  color: #14639e;
+  margin-bottom: 30px;
+  font-size: 32px;
+  line-height: 40px;
+}
+
+.menu-item-description {
+  font-size: 22px;
+  color: #14639e;
+  line-height: 30.8px;
+}
+
+.iav-primary-menu .sub-menu {
+  list-style-type: none;
+}
+
+.iav-primary-menu .sub-menu li {
+  border-bottom: 1px solid $iav-light-blue-menu;
+  list-style-type: none;
+}
+
+.iav-primary-menu .sub-menu li a {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  display: inline-block;
+
+  &:hover {
+    color: $iav-light-blue-menu;
+  }
+}
+
+.iav-primary-menu .sub-menu li:first-child {
+  border-top: 1px solid $iav-light-blue-menu;
+}
+
+.iav-primary-menu .sub-menu .menu-item-has-children {
+  background-image: url('../images/arrow_right.png');
+  background-position: center right;
+  background-repeat: no-repeat;
+
+  &:hover {
+    background-image: url('../images/arrow_right_hover.png');
+  }
+}
+
+// Active Links in Dropdown
+.iav-primary-menu .uk-navbar-dropdown li.active > a {
+  font-weight: 700;
+  color: $iav-light-blue-menu;
+}
+
+.iav-primary-menu .uk-navbar-dropdown li.menu-item-has-children.active > a {
+  font-weight: 700;
+  color: $iav-light-blue-menu;
+}
+
+.iav-primary-menu .uk-navbar-dropdown li.menu-item-has-children.active {
+  background-image: url('../images/arrow_right_hover.png');
+  background-position: center right;
+  background-repeat: no-repeat;
+}  
+
+/* --------------------------------------------------------------
+# First Dropdown is Blue
+-------------------------------------------------------------- */
+
+ul.iav-navbar-nav .uk-navbar-dropdown:first-of-type {
+  background-color: $iav-blue;
+  border-top-color: $iav-blue;
+}
+
+ul.iav-navbar-nav .uk-navbar-dropdown:first-of-type * {
+  color: $iav-white;
+}
+
+ul.iav-navbar-nav .uk-navbar-dropdown:first-of-type .sub-menu li {
+  border: 1px solid white;
+  border-radius: 45px;
+  margin-bottom: 20px;
+  margin-right: 20px;
+  display: inline-block;
+}
+
+ul.iav-navbar-nav .uk-navbar-dropdown:first-of-type .sub-menu li a {
+  padding: 5px 32px;
+}
+
+/* --------------------------------------------------------------
+# SEARCH
+-------------------------------------------------------------- */
+
+header .iav-search-icon {
+  position: relative;
+}
+
+header .iav-search-icon {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='22' height='22' viewBox='0 0 22 22'%3E%3Cpath fill='%230E4A80' d='M102.484375,111.914062 L101.582031,112.816406 L94.8789062,106.113281 C94.5065086,106.428387 94.1126323,106.714842 93.6972656,106.972656 C93.281899,107.23047 92.8450544,107.445312 92.3867188,107.617188 C91.9283831,107.789063 91.4485702,107.92513 90.9472656,108.025391 C90.445961,108.125652 89.9375026,108.175781 89.421875,108.175781 C88.24739,108.175781 87.1516978,107.953778 86.1347656,107.509766 C85.1178335,107.065753 84.2298215,106.464197 83.4707031,105.705078 C82.7115847,104.94596 82.1100283,104.050786 81.6660156,103.019531 C81.222003,101.988276 81,100.899745 81,99.7539062 C81,99.1809867 81.0501297,98.6295599 81.1503906,98.0996094 C81.2506515,97.5696588 81.4082021,97.0468776 81.6230469,96.53125 C81.8378917,96.0156224 82.0957016,95.5286481 82.3964844,95.0703125 C82.6972671,94.6119769 83.0481751,94.1822937 83.4492188,93.78125 C83.8502624,93.4088523 84.2799456,93.0651057 84.7382812,92.75 C85.1966169,92.4348943 85.6764298,92.1770843 86.1777344,91.9765625 C86.679039,91.7760407 87.2018202,91.6184902 87.7460938,91.5039062 C88.2903673,91.3893223 88.8489555,91.3320312 89.421875,91.3320312 C90.5677141,91.3320312 91.6562448,91.5540342 92.6875,91.9980469 C93.7187552,92.4420595 94.6139285,93.043616 95.3730469,93.8027344 C96.1321653,94.5618528 96.7337217,95.4498647 97.1777344,96.4667969 C97.621747,97.483729 97.84375,98.5794212 97.84375,99.7539062 C97.84375,100.269534 97.7936203,100.777992 97.6933594,101.279297 C97.5930985,101.780601 97.4570321,102.260414 97.2851562,102.71875 C97.1132804,103.177086 96.8984388,103.61393 96.640625,104.029297 C96.3828112,104.444664 96.0963557,104.83854 95.78125,105.210938 L102.484375,111.914062 Z M89.421875,106.886719 C90.3958382,106.886719 91.3124957,106.693361 92.171875,106.306641 C93.0312543,105.91992 93.7831999,105.4043 94.4277344,104.759766 C95.0722688,104.115231 95.5807273,103.363286 95.953125,102.503906 C96.3255227,101.644527 96.5117188,100.727869 96.5117188,99.7539062 C96.5117188,98.779943 96.3255227,97.8561242 95.953125,96.9824219 C95.5807273,96.1087196 95.0722688,95.3496126 94.4277344,94.7050781 C93.7831999,94.0605437 93.0312543,93.5520852 92.171875,93.1796875 C91.3124957,92.8072898 90.3958382,92.6210938 89.421875,92.6210938 C88.9348934,92.6210938 88.4622419,92.6712235 88.0039062,92.7714844 C87.5455706,92.8717453 87.1015646,93.0078116 86.671875,93.1796875 C86.2421854,93.3515634 85.8339863,93.566405 85.4472656,93.8242188 C85.0605449,94.0820325 84.709637,94.3828108 84.3945312,94.7265625 C84.0507795,95.0703142 83.7500013,95.4355449 83.4921875,95.8222656 C83.2343737,96.2089863 83.0123707,96.610024 82.8261719,97.0253906 C82.639973,97.4407573 82.5039067,97.8776019 82.4179688,98.3359375 C82.3320308,98.7942731 82.2890625,99.2669246 82.2890625,99.7539062 C82.2890625,100.727869 82.4752586,101.651688 82.8476562,102.525391 C83.2200539,103.399093 83.7285124,104.151039 84.3730469,104.78125 C85.0175813,105.411461 85.7766883,105.91992 86.6503906,106.306641 C87.5240929,106.693361 88.4479118,106.886719 89.421875,106.886719 Z' transform='translate(-81 -91)'/%3E%3C/svg%3E%0A"); 
+  width: 22px;
+  min-height: 70px;
+  background-position: 0 center;
+  background-repeat: no-repeat;
+  margin-right: 30px;
+
+  @media (min-width: $breakpoint-medium) {
+    min-height: 0;
+    margin-top: 20px;
+    background-position: 0 center;
+  }
+}
+
+.iav-search-navbar {
+
+  @media (min-width: $breakpoint-medium) {
+    margin-top: 10px;
+    max-width: 800px;
+    min-height: 106px;
+  }
+}
+
+.nav-overlay {
+  display: flex;
+  align-items: center;
+  padding: 0 5px;
+
+  @media (min-width: $breakpoint-medium) {
+    padding: 0;
+  }
+}
+
+.nav-overlay form {
+  flex-grow: 2;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.nav-overlay form input {
+  padding: 5px 5px 5px 5px !important;
+  font-size: 22px;
+  color: $iav-blue;
+  margin-top: 0;
+  flex-grow: 2;
+  max-width: 230px;
+
+  @media (min-width: $breakpoint-medium) {
+    padding: 10px 10px 10px 5px !important;
+    margin-top: 0;
+    max-width: 100%;
+  }
+}
+
+header form button {
+  width: 22px;
+  height: 51px;
+  padding: 0;
+  display: inline-block;
+  text-align: center;
+  background-image: url($magnify);
+  background-repeat: no-repeat;
+  background-position: 0 17px;
+  background-color: none;
+  margin-left: 30px;
+}
+
+#header .iav-navbar-container form button {
+  background-color: white !important;
+}
+
+header form button:focus {
+  background-color: white;
+}
+
+.iav-search-close {
+  background-image: url($search-close);
+  background-repeat: no-repeat;
+  background-position: 0 center;
+  margin-right: 15px;
+  width: 20px;
+  padding: 0;
+
+  @media (min-width: $breakpoint-medium) {
+    margin-right: 36px !important;
+  }
+}

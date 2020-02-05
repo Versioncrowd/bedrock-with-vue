@@ -1,0 +1,466 @@
+.iav-related-content {
+  background-color: $iav-related-grey;
+  padding-top: 30px;
+  padding-bottom: 100px;
+}
+
+/* --------------------------------------------------------------
+# Featured Teaser
+-------------------------------------------------------------- */
+
+.featured-subtitle {
+  margin-top: 20px;
+
+  @media (min-width: $breakpoint-medium) {
+    margin-top: 70px;
+  }
+}
+
+.featured-subtitle::after {
+  padding-top: 15px;
+  content: "";
+  display: block;
+  width: 60px;
+  height: 3px;
+  border-bottom: 3px solid $iav-blue;
+}
+
+/* --------------------------------------------------------------
+# Featured Teaser Navigation & Navigation for other Teasers
+-------------------------------------------------------------- */
+
+.iav-teaser-navigation,
+.iav-featured-teaser-navigation {
+  list-style-type: none;
+  padding-left: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.iav-teaser-navigation li,
+.iav-featured-teaser-navigation li {
+  padding-right: 20px;
+}
+
+.iav-teaser-navigation li > a,
+.iav-featured-teaser-navigation li > a {
+  display: block;
+  height: 40px;
+  width: 30px;
+  margin-bottom: 0;
+  margin-top: 0;
+  background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='UTF-8'%3F%3E%3Csvg width='30px' height='1px' viewBox='0 0 30 1' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3C!-- Generator: Sketch 55.2 (78181) - https://sketchapp.com --%3E%3Ctitle%3ERectangle%3C/title%3E%3Cdesc%3ECreated with Sketch.%3C/desc%3E%3Cg id='Symbols' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd'%3E%3Cg id='D/Interaction/Indikator/Element/Feat/Blau3/Default' transform='translate(0.000000, -2.000000)' fill='%2314639E' fill-rule='nonzero'%3E%3Crect id='Rectangle' x='0' y='2' width='30' height='1'%3E%3C/rect%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  background-position: 0 25px;
+  background-repeat: no-repeat;
+}
+
+.iav-teaser-navigation .uk-active > a,
+.iav-featured-teaser-navigation .uk-active > a {
+  background-position: 0 23px;
+  background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='UTF-8'%3F%3E%3Csvg width='30px' height='5px' viewBox='0 0 30 5' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3C!-- Generator: Sketch 55.2 (78181) - https://sketchapp.com --%3E%3Ctitle%3ERectangle%3C/title%3E%3Cdesc%3ECreated with Sketch.%3C/desc%3E%3Cg id='Symbols' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd'%3E%3Cg id='D/Interaction/Indikator/Element/Feat/Blau3/Default' transform='translate(0.000000, -2.000000)' fill='%2314639E' fill-rule='nonzero'%3E%3Crect id='Rectangle' x='0' y='2' width='30' height='5'%3E%3C/rect%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+
+.iav-teaser-navigation li:hover a,
+.iav-featured-teaser-navigation li:hover a {
+  background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='UTF-8'%3F%3E%3Csvg width='30px' height='1px' viewBox='0 0 30 1' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3C!-- Generator: Sketch 55.2 (78181) - https://sketchapp.com --%3E%3Ctitle%3ERectangle%3C/title%3E%3Cdesc%3ECreated with Sketch.%3C/desc%3E%3Cg id='Symbols' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd'%3E%3Cg id='D/Interaction/Indikator/Element/Feat/Blau3/Default' transform='translate(0.000000, -2.000000)' fill='%235daedb' fill-rule='nonzero'%3E%3Crect id='Rectangle' x='0' y='2' width='30' height='1'%3E%3C/rect%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+
+.iav-teaser-navigation li.uk-active:hover a,
+.iav-featured-teaser-navigation li.uk-active:hover a {
+  background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='UTF-8'%3F%3E%3Csvg width='30px' height='5px' viewBox='0 0 30 5' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3C!-- Generator: Sketch 55.2 (78181) - https://sketchapp.com --%3E%3Ctitle%3ERectangle%3C/title%3E%3Cdesc%3ECreated with Sketch.%3C/desc%3E%3Cg id='Symbols' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd'%3E%3Cg id='D/Interaction/Indikator/Element/Feat/Blau3/Default' transform='translate(0.000000, -2.000000)' fill='%235daedb' fill-rule='nonzero'%3E%3Crect id='Rectangle' x='0' y='2' width='30' height='5'%3E%3C/rect%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+
+.iav-featured-teaser-textbox {
+  position: relative;
+  margin: 15px;
+  padding: 30px;
+  width: 25%;
+  overflow: hidden;
+  word-wrap: break-word;
+}
+
+.iav-featured-teaser-textbox.large {
+  height: calc(100% - 90px);
+}
+
+.iav-featured-teaser-textbox.small {
+  height: calc(50% - 30px);
+  padding: 15px;
+  width: 35%;
+
+  @media (min-width: $breakpoint-medium) {
+    width: 25%;
+  }
+}
+
+.iav-featured-teaser-textbox .iav-post-type {
+  margin-bottom: 15px;
+  color: #fff;
+
+  @media (min-width: $breakpoint-medium) {
+    margin-bottom: 30px;
+  }
+}
+
+.iav-featured-teaser-textbox h3 {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 25.6px;
+  margin-bottom: 0;
+  color: #fff;
+
+  @media (min-width: $breakpoint-medium) {
+    font-size: 22px;
+    line-height: 30.8px;
+  }
+}
+
+.iav-featured-teaser-textbox h3.iav-event-location {
+  font-weight: 300;
+  margin-top: 0;
+}
+
+.iav-featured-teaser-textbox h3 + h3 {
+  margin-bottom: 0;
+}
+
+.iav-featured-teaser-textbox h4 + h3 {
+  margin-top: 0;
+}
+
+.iav-featured-teaser-textbox,
+.iav-featured-teaser-textbox h4,
+.iav-featured-teaser-textbox h5 {
+  color: #fff;
+}
+
+.iav-featured-teaser-textbox h4 {
+  position: relative;
+  font-weight: 700;
+  margin-bottom: 0;
+  font-size: 16px;
+  line-height: 25.6px;
+
+  @media (min-width: $breakpoint-medium) {
+    font-size: 22px;
+    line-height: 30.8px;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 80px;
+    border-bottom: solid 4px #fff;
+    margin-top: 10px;
+    margin-bottom: 10px;
+
+    @media (min-width: $breakpoint-medium) {
+      margin-top: 20px;
+      margin-bottom: 20px;
+    }
+  }
+}
+
+.iav-featured-teaser-textbox h5 {
+  position: absolute;
+  bottom: 10px;
+  color: white;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 25.6px;
+
+  & h5::after {
+    content: url($featured_teaser_link_arrow_white_small);
+    padding-left: 10px;
+    vertical-align: middle;
+  }
+}
+
+.iav-featured-teaser-textbox.small h3,
+.iav-featured-teaser-textbox.small h4 {
+  font-size: 16px;
+  line-height: 25.6px;
+
+  @media (min-width: $breakpoint-medium) {
+    font-size: 22px;
+    line-height: 30.8px;
+  }
+}
+
+.iav-featured-teaser-textbox.small h4 {
+  margin-top: 15px;
+
+  @media (min-width: $breakpoint-medium) {
+    margin-top: 30px;
+  }
+}
+
+.iav-featured-teaser-textbox.small h5 {
+  margin-bottom: 15px;
+}
+
+.iav-featured-teaser-textbox.blue,
+.iav-featured-teaser-textbox.light-blue,
+.iav-featured-teaser-textbox.orange {
+  background-color: $iav-blue;
+  color: #fff;
+
+  & h3 {
+    color: white !important;
+  }
+
+  & h4 {
+    color: white !important;
+  }
+
+  & h4::after {
+    display: none;
+  }
+
+  & h5 {
+    position: absolute;
+    bottom: 0;
+    color: white;
+    font-weight: 600;
+  }
+
+  & h5::after {
+    content: url($featured_teaser_link_arrow_white_small);
+    padding-left: 10px;
+    vertical-align: middle;
+  }
+}
+
+.iav-featured-teaser-textbox.light-blue {
+  background-color: $iav-light-blue;
+}
+
+.iav-featured-teaser-textbox.orange {
+  background-color: #e6962c;
+}
+
+.iav-featured-teaser-textbox.white {
+  background-color: #fff;
+  color: $iav-blue;
+
+  & h3 {
+    color: $iav-blue;
+  }
+
+  & h4 {
+    color: $iav-blue;
+  }
+
+  & h4::after {
+    display: none;
+  }
+
+  & h5 {
+    position: absolute;
+    bottom: 0;
+    color: $iav-blue;
+    font-weight: 600;
+  }
+
+  & h5::after {
+    content: url($featured_teaser_link_arrow_blue_small);
+    padding-left: 10px;
+    vertical-align: middle;
+  }
+
+  & .iav-post-type {
+    color: $iav-blue;
+  }
+}
+
+.iav-featured-teaser-textbox.blue.large,
+.iav-featured-teaser-textbox.light-blue.large,
+.iav-featured-teaser-textbox.orange.large {
+  & h4 {
+    margin-bottom: 30px;
+
+    @media (min-width: $breakpoint-medium) {
+      margin-bottom: 40px;
+    }
+  }
+
+  & h4::after {
+    display: block;
+    border-bottom-color: #fff;
+  }
+
+  & h5::after {
+    padding-top: 6px; // changed it again
+
+    @media (min-width: $breakpoint-medium) {
+      content: url($featured_teaser_link_arrow_white_small);
+    }
+  }
+}
+
+.iav-featured-teaser-textbox.white.large {
+  & h4 {
+    margin-bottom: 20px;
+
+    @media (min-width: $breakpoint-medium) {
+      margin-bottom: 40px;
+    }
+  }
+
+  & h4::after {
+    display: block;
+    border-bottom-color: $iav-blue;
+  }
+
+  & h5 {
+    font-size: 16px;
+    line-height: 25.6px;
+  }
+
+  & h5::after {
+    content: url($featured_teaser_link_arrow_blue_large);
+    padding-top: 5px;
+  }
+}
+
+/* --------------------------------------------------------------
+# Featured Teaser Mobile
+-------------------------------------------------------------- */
+
+.iav-small-teaser.featured {
+  box-sizing: border-box;
+  background-color: white;
+  z-index: 4;
+}
+
+.iav-small-featured-teaser-textbox {
+  padding: 15px 0;
+  position: absolute;
+  overflow: hidden;
+  top: 197px;
+  background-color: white;
+  width: 100%;
+  height: calc(100% - 227px);
+}
+
+.iav-small-teaser p.iav-post-type {
+  padding: 0 15px;
+}
+
+.iav-small-teaser-textbox h4.iav-story-title {
+  padding: 0;
+}
+
+/* --------------------------------------------------------------
+# Second Slide in Featured Teaser
+-------------------------------------------------------------- */
+
+.iav-jobs-slide {
+  display: flex;
+  flex-direction: row;
+  background-color: $iav-light-blue;
+}
+
+.iav-jobs-slide div {
+  min-width: 50px;
+
+  @media (min-width: $breakpoint-medium) {
+    min-width: 70px;
+  }
+}
+
+.iav-jobs-slide div:nth-child(1) {
+  margin-right: auto;
+  padding: 30px 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  @media (min-width: $breakpoint-large) {
+    padding: 45px 60px;
+  }
+}
+
+.iav-jobs-slide div:nth-child(1) * {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.iav-jobs-slide div:nth-child(2) {
+  background-color: #009fca;
+}
+
+.iav-jobs-slide div:nth-child(3) {
+  background-color: $iav-blue;
+}
+
+.iav-jobs-slide div:nth-child(4) {
+  background-color: #0e4a80;
+}
+
+.iav-jobs-slide div:nth-child(5) {
+  background-color: $iav-dark-blue;
+}
+
+/* --------------------------------------------------------------
+# Text Styles
+-------------------------------------------------------------- */
+
+.iav-jobs-slide-number,
+.iav-jobs-slide-text {
+  font-size: 32px;
+  line-height: 40px;
+  color: $iav-blue;
+  font-weight: 700;
+}
+
+.iav-jobs-slide div:nth-child(1) .iav-jobs-slide-text {
+  margin-top: 50px;
+
+  @media (min-width: $breakpoint-medium) {
+    font-size: 64px;
+    line-height: 70.4px;
+    margin-top: 50px;
+  }
+}
+
+.iav-jobs-slide div:nth-child(1) .iav-jobs-slide-number {
+  color: #fff;
+  font-size: 64px;
+  line-height: 70.4px;
+}
+
+.iav-jobs-slide div:nth-child(1) .iav-jobs-slide-cat {
+  font-size: 16px;
+  line-height: 25.6px;
+  color: #fff;
+}
+
+.iav-jobs-slide div:nth-child(1) .iav-jobs-slide-link {
+  font-weight: 700;
+  color: #fff;
+  font-size: 22px;
+  line-height: 30.8px;
+  position: relative;
+  display: block;
+  margin-top: auto !important;
+
+  &:hover {
+    color: #fff;
+  }
+}
+
+.iav-jobs-slide div:nth-child(1) .iav-jobs-slide-link::after {
+  content: '';
+  background-image: url($featured_teaser_link_arrow_white_large);
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-position: top left;
+  width: 20px;
+  height: 20px;
+  margin-left: 15px;
+}

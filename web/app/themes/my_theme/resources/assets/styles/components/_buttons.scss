@@ -1,0 +1,14 @@
+button.iav-button-primary {
+  background-color: #91c60e;
+  color: white;
+  font-weight: 600;
+  font-weight: 200;
+  font-family: $global-font-family;
+}
+
+button.iav-button-primary:hover,
+button.iav-button-primary:focus {
+  background-color: #86b410 !important;
+  color: white !important;
+  font-weight: 600;
+}

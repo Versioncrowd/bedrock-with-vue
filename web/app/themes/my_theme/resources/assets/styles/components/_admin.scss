@@ -1,0 +1,12 @@
+.logged-in .iav-stage,
+.logged-in .iav-stage-large {
+  margin-top: 35px;
+
+  @media (min-width: 783px) {
+    // margin-top: 49px;
+  }
+
+  @media (min-width: $breakpoint-medium) {
+    // margin-top: 117px;
+  }
+}

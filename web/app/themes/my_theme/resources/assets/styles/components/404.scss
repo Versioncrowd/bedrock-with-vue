@@ -1,0 +1,24 @@
+/* --------------------------------------------------------------
+# Stage for 404
+-------------------------------------------------------------- */
+
+.error404 main .iav-stage {
+  @media (min-width: $breakpoint-xlarge) {
+    transform: translateY(-250px);
+    padding-top: 600px !important;
+  }
+}
+
+.error404 main .iav-content {
+  @media (min-width: $breakpoint-xlarge) {
+    margin-top: 250px !important;
+  }
+}
+
+.error404 main .iav-introtext {
+  @media (min-width: $breakpoint-large) {
+    height: 260px;
+    font-size: 36px;
+  }
+}
+

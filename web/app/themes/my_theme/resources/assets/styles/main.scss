@@ -1,0 +1,70 @@
+// 1. Your custom variables and variable overwrites.
+@import "common/variables";
+
+/** Import everything from autoload */
+// native sage bootstrap autoloader: not using this in IAV since we dont need everything from bootstrap
+// @import "./autoload/**/*";
+
+/**
+ * Import npm dependencies
+ *
+ * Prefix your imports with `~` to grab from node_modules/
+ * @see https://github.com/webpack-contrib/sass-loader#imports
+ */
+// @import "~some-node-module";
+// 2. Import default variables and available mixins.
+@import "~uikit/src/scss/variables-theme.scss";
+@import "~uikit/src/scss/mixins-theme.scss";
+
+// 3. Your custom mixin overwrites.
+@mixin hook-accordion-content() {
+  margin-right: 95px;
+}
+
+// 4. Import Fullpage.jsfrom node_modules
+@import "~fullpage.js/dist/fullpage.css";
+
+// 5. Import UIkit
+@import "~uikit/src/scss/uikit-theme.scss";
+
+/** Import theme styles */
+@import "common/global";
+@import "components/buttons";
+@import "components/comments";
+@import "components/wp-classes";
+@import "components/content-standard-modules";
+@import "components/content-story-modules";
+@import "components/content-subpages-modules";
+@import "components/sidebar-modules";
+@import "components/stage-modules";
+@import "components/breadcrumbs";
+@import "components/social-media-share";
+@import "components/related-content";
+@import "components/career-headlines";
+@import "layouts/header";
+@import "layouts/sidebar";
+@import "layouts/footer";
+@import "layouts/pages";
+@import "layouts/posts";
+@import "layouts/tinymce";
+@import "layouts/themevar";
+@import "layouts/slide-menu";
+@import "components/admin";
+@import "components/landing-teaser";
+@import "components/jobs";
+@import "components/landing-standard";
+@import "components/landing-onepager";
+@import "components/landing-manual";
+@import "components/landing-onepager-career";
+@import "components/landing-locations-search";
+@import "components/search";
+@import "components/image-puzzle";
+@import "components/front-page";
+@import "components/gravity-forms-base";
+@import "components/forms";
+@import "components/jobs-tab";
+@import "components/404";
+@import "components/events-search";
+@import "components/locations";
+@import "components/print";
+@import "components/topics";
